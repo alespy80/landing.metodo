@@ -1,0 +1,159 @@
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:'Segoe UI',sans-serif;background:#0a0a18;color:#d0d0e0;min-height:100vh}
+
+/* HEADER */
+header{background:linear-gradient(135deg,#0a0a18,#14143a);border-bottom:1px solid rgba(124,106,247,.15);padding:2rem 1rem;text-align:center}
+.header-inner{max-width:860px;margin:0 auto}
+.logo{font-size:1.9rem;font-weight:800;color:#fff;letter-spacing:-.5px;text-decoration:none}
+.logo span{color:#7c6af7}
+header p{color:rgba(255,255,255,.45);font-size:.88rem;margin-top:.35rem}
+
+main{max-width:860px;margin:2rem auto;padding:0 1rem}
+
+/* STEPS */
+.steps{display:flex;align-items:center;margin-bottom:2rem}
+.step{display:flex;align-items:center;gap:.45rem;padding:.45rem 1rem;border-radius:20px;font-size:.8rem;font-weight:700;background:#13132e;color:#444;cursor:default;transition:all .2s;white-space:nowrap}
+.step span{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.7rem}
+.step.ativa{background:#7c6af7;color:#fff;cursor:pointer}
+.step.concluida{background:#27ae60;color:#fff;cursor:pointer}
+.step-line{flex:1;height:2px;background:#13132e;min-width:16px}
+.oculto{display:none!important}
+
+/* CARDS */
+.card{background:#10102a;border:1px solid rgba(124,106,247,.14);border-radius:14px;padding:1.5rem;margin-bottom:1.25rem}
+.card h2{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.35rem}
+.desc{font-size:.82rem;color:#555;margin-bottom:1.1rem;line-height:1.5}
+
+/* PILAR HEADER */
+.pilar-header{border-left:3px solid var(--cor,#7c6af7)}
+.pilar-tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#7c6af7;margin-bottom:.5rem}
+.card[data-pilar="ativacao"]  .pilar-tag{color:#7c6af7}
+.card[data-pilar="tensao"]    .pilar-tag{color:#e74c3c}
+.card[data-pilar="intensidade"].pilar-tag{color:#f39c12}
+.card[data-pilar="eficiencia"] .pilar-tag{color:#27ae60}
+.card[data-pilar="ativacao"]  {border-left-color:#7c6af7}
+.card[data-pilar="tensao"]    {border-left-color:#e74c3c}
+.card[data-pilar="intensidade"]{border-left-color:#f39c12}
+.card[data-pilar="eficiencia"] {border-left-color:#27ae60}
+
+/* FORM */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:.9rem;margin-top:.9rem}
+.campo-full{grid-column:1/-1}
+.campo label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#555;margin-bottom:.3rem}
+.campo input,.campo select{width:100%;padding:.58rem .75rem;background:#0a0a18;border:1.5px solid #1e1e40;border-radius:8px;color:#d0d0e0;font-size:.88rem;font-family:inherit;transition:border-color .2s}
+.campo input:focus,.campo select:focus{outline:none;border-color:#7c6af7}
+.campo select option{background:#10102a}
+
+/* AÇÕES */
+.acoes{display:flex;gap:.7rem;margin:1.25rem 0;flex-wrap:wrap;align-items:center}
+.acoes-fim{justify-content:flex-end}
+button{cursor:pointer;border:none;border-radius:8px;font-weight:700;font-size:.88rem;padding:.65rem 1.4rem;transition:all .2s;font-family:inherit}
+.btn-primary{background:#7c6af7;color:#fff}
+.btn-primary:hover{background:#6355d4}
+.btn-sec{background:#13132e;color:#888;border:1px solid #1e1e40}
+.btn-sec:hover{background:#1e1e40}
+.btn-print{background:#8e44ad;color:#fff}
+.btn-print:hover{background:#6c3483}
+.btn-verde{background:#27ae60;color:#fff}
+.btn-verde:hover{background:#1e8449}
+
+/* RESULTADO */
+.res-header{background:linear-gradient(135deg,#14143a,#0a0a28);border:1px solid rgba(124,106,247,.25);border-radius:14px;padding:1.5rem;margin-bottom:1.25rem;display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap}
+.res-logo{font-size:1.25rem;font-weight:800;color:#fff;white-space:nowrap}
+.res-logo span{color:#7c6af7}
+.res-nome{font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:.25rem}
+.res-meta{font-size:.82rem;color:#666;margin-bottom:.55rem}
+.res-tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.tag{padding:.18rem .65rem;border-radius:20px;font-size:.72rem;font-weight:700}
+.tag-nivel{background:rgba(124,106,247,.18);color:#7c6af7}
+.tag-obj{background:rgba(39,174,96,.18);color:#27ae60}
+.tag-freq{background:rgba(52,152,219,.18);color:#3498db}
+
+/* SCORE GERAL */
+.score-geral{background:#10102a;border:1px solid rgba(124,106,247,.2);border-radius:12px;padding:1.1rem 1.4rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.sg-esq{min-width:120px}
+.sg-label{font-size:.72rem;color:#555;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.2rem}
+.sg-valor{font-size:1.25rem;font-weight:800}
+.sg-barra-wrap{flex:1;min-width:100px;background:#1a1a38;border-radius:4px;height:8px;overflow:hidden}
+.sg-barra-fill{height:100%;border-radius:4px;transition:width .8s ease}
+.sg-num{font-size:1.4rem;font-weight:800;white-space:nowrap}
+.sg-num span{font-size:.8rem;color:#444;font-weight:400}
+
+/* PILARES RESULTADO */
+.pilares-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:1.25rem}
+.pilar-card{background:#10102a;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.1rem;border-top:3px solid var(--cor,#7c6af7)}
+.pc-top{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.55rem}
+.pc-icone{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+.pc-info{flex:1}
+.pc-titulo{font-size:.85rem;font-weight:700;color:#fff;line-height:1.2}
+.pc-fonte{font-size:.7rem;color:#444;margin-top:.15rem}
+.pc-score{font-size:.75rem;font-weight:700;white-space:nowrap;margin-top:2px}
+.pc-barra{background:#1a1a38;border-radius:3px;height:4px;margin-bottom:.65rem;overflow:hidden}
+.pc-fill{height:100%;border-radius:3px;transition:width .6s ease}
+.pc-desc{font-size:.78rem;color:#555;line-height:1.5;margin-bottom:.55rem}
+.pc-rec{font-size:.76rem;color:#777;line-height:1.5;border-top:1px solid #1a1a38;padding-top:.5rem}
+
+/* SEÇÕES */
+.res-secao{background:#10102a;border:1px solid rgba(124,106,247,.1);border-radius:12px;padding:1.25rem;margin-bottom:1.1rem}
+.res-secao h3{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:.9rem}
+
+/* TESTES */
+.testes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.8rem}
+.teste-item{background:#0a0a18;border-radius:8px;padding:.85rem}
+.ti-nome{font-size:.72rem;color:#555;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem}
+.ti-val{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.45rem}
+.ti-val span{font-size:.72rem;color:#555;font-weight:400}
+.ti-barra{background:#1a1a38;border-radius:3px;height:5px;margin-bottom:.35rem;overflow:hidden}
+.ti-fill{height:100%;border-radius:3px}
+.ti-class{font-size:.75rem;font-weight:700}
+
+/* COMPOSIÇÃO */
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.7rem}
+.comp-item{background:#0a0a18;border-radius:8px;padding:.8rem;text-align:center}
+.ci-label{font-size:.68rem;color:#555;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem}
+.ci-val{font-size:1.05rem;font-weight:700;color:#fff}
+.ci-status{font-size:.72rem;font-weight:700;margin-top:.2rem}
+
+/* PROJEÇÃO */
+.proj-secao{border-color:rgba(124,106,247,.25)}
+.proj-aviso{font-size:.76rem;color:#444;font-style:italic;margin-bottom:.9rem}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.8rem}
+.proj-card{background:#0a0a18;border-radius:8px;padding:.9rem}
+.pj-titulo{font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.65rem}
+.pj-linha{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid #1a1a38;font-size:.82rem}
+.pj-linha:last-child{border:none}
+.pj-linha span:first-child{color:#444}
+.pj-linha span:last-child{font-weight:600;color:#888}
+.pj-dest span:last-child{font-weight:800!important}
+
+/* TÉCNICAS */
+.tec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:.75rem}
+.tec-card{background:#0a0a18;border-left:3px solid #7c6af7;border-radius:0 8px 8px 0;padding:.85rem 1rem}
+.tec-pilar{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.tec-nome{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.tec-desc{font-size:.77rem;color:#555;line-height:1.5}
+
+/* ATENÇÃO */
+.at-secao{border-color:rgba(243,156,18,.25);background:rgba(243,156,18,.04)}
+.at-lista{padding-left:1.2rem}
+.at-lista li{font-size:.82rem;color:#f39c12;margin-bottom:.35rem;line-height:1.5}
+
+/* RESPONSIVO */
+@media(max-width:580px){
+  .steps{gap:.2rem}
+  .step{padding:.4rem .65rem;font-size:.72rem}
+  .res-header{flex-direction:column}
+  .score-geral{flex-wrap:wrap}
+}
+
+/* IMPRESSÃO */
+@media print{
+  body{background:#fff;color:#111}
+  header,.steps,.acoes{display:none!important}
+  #etapa-1,#etapa-2{display:none!important}
+  #etapa-3{display:block!important}
+  .card,.res-secao,.res-header,.pilar-card,.teste-item,.comp-item,.proj-card,.tec-card{background:#fff!important;border-color:#ddd!important;break-inside:avoid}
+  .logo span,.res-logo span{color:#5b4fd4}
+  .sg-barra-wrap,.pc-barra,.ti-barra{background:#eee!important}
+}
